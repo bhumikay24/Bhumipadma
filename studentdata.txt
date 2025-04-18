@@ -3,7 +3,14 @@ int main() {
     int i;
     float sum = 0, average;
 
+
  // Check for valid marks
+
+    for (i = 0; i < 5; i++) {
+        printf("Enter marks for student %d: ", i + 1);
+        scanf("%d", &marks[i]);
+
+        // Check for valid marks
         if (marks[i] < 0 || marks[i] > 100) {
             printf("Invalid marks entered. Please enter between 0 and 100.\n");
             i--; // retry current student
@@ -12,8 +19,6 @@ int main() {
 
         sum += marks[i];
     }
-
-
 
 return 0;
 }
